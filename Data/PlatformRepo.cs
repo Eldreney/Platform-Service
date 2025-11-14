@@ -16,13 +16,11 @@ namespace PlatformService.Data
         {
           
             if (newPlatform == null)
-            {
                 throw new ArgumentNullException(nameof(newPlatform));
-            }
+            
 
             _context.Platforms.AddAsync(newPlatform);
             return Task.CompletedTask;
-
         }
 
         public async Task<IEnumerable<Platform>> getAllPlatforms()
@@ -42,7 +40,7 @@ namespace PlatformService.Data
 
         public async Task<bool> saveChanges()
         {
-          return await _context.SaveChangesAsync()> 0;
+          return await _context.SaveChangesAsync()>0;
         }
     }
 }
