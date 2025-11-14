@@ -40,7 +40,7 @@ namespace PlatformService.Data
 
         public async Task<bool> saveChanges()
         {
-          return await _context.SaveChangesAsync()>0;
+          return await _context.SaveChangesAsync()>=0;
         }
     }
 }
