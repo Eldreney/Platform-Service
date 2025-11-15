@@ -25,7 +25,7 @@ namespace PlatformService.Data
 
         public async Task<IEnumerable<Platform>> getAllPlatforms()
         {
-           return await _context.Platforms.AsNoTracking().ToListAsync();       
+           return await _context.Platforms.ToListAsync();       
         }
 
         public Task<Platform> getPlatformById(int id)
