@@ -22,7 +22,7 @@ if (app.Environment.IsDevelopment())
 
 app.UseHttpsRedirection();
 
-
+PrebDb.PrepPopulation(app); 
 
 
 app.Run();
